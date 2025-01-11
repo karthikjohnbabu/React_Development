@@ -137,17 +137,59 @@ $ npm run build -> Production Build
 
 - Component inside a Component is called Component Composition
 
-# Note: Any where inside JSX, Remember JSX start from (from here 
+# Note: Any where inside JSX, Remember JSX start from (from here
+
 # Goes till here)
+
 # Inside this {} curly braces you can write JavaScript Code.
 
-* I can use a react element inside a react element
-* I can use a react element inside a functional component
-* I can use a functional component inside a element
+- I can use a react element inside a react element
+- I can use a react element inside a functional component
+- I can use a functional component inside a element
 
 # JSX prevents cross side scripting attack
 
+# How is Ziggy and Zomato apps are developed
 
+# How many components in the App.
 
+- Header
+  - Logo
+  - Nav Items
+- Body
 
+  - Search
+  - Restaurant Container
+    - Restaurant Card
+      - Img
+      - Name of the Res, Star Rating, cuisine, delivery time
+
+- Footer
+  - Copyright
+  - Links
+  - Address
+  - Contact
+
+In react we have something called as props.
+Props are short form for property
+
+Suppose we want to dynamically pass some data to a component.
+We can pass it through, props.
+
+Props are normal argument to a function
+
+# What is Config Driven UI.
+
+- The website is driven by data, and thats called config driven UI.
+- The config driven UI means, that the UI is driven by a config.
+
+# What is cloudinary ?
+
+- This is again a CDN.
+- When we build a large scale applications, we put all our images in CDN.
+- Swiggy is using the cloudinary as their CDN to display images.
+
+Note: React Official Documentation:
+
+- We dont recommend using indexes for keys if the order of items may change. This can negatively impact performance and may cause issues with component state.
 
