@@ -189,7 +189,92 @@ Props are normal argument to a function
 - When we build a large scale applications, we put all our images in CDN.
 - Swiggy is using the cloudinary as their CDN to display images.
 
-Note: React Official Documentation:
+# Note: React Official Documentation:
 
 - We dont recommend using indexes for keys if the order of items may change. This can negatively impact performance and may cause issues with component state.
 
+# Two types of Export/Import
+
+- Default Export/Import
+
+  - export default component
+  - import component form "path"
+
+- Named Export/Import
+  - export const component
+  - import {Component} from "path";
+
+# What is hooks ?
+
+- Normal Java Script utility functions
+- A react hook is a normal JavaScript function given to us by react.
+- That function has some logics in it.
+
+# They are two important hooks in React
+
+- useState() -> Used to generate Super Powerful State Variables in React, the name useState because it maintains the state of the component
+- useEffect()
+
+- Whenever a state variables updates, react re-renders the component
+
+
+# Reconciliation Algorithm also knowns as React Fibre
+* React creates a virtual DOM
+* virtual DOM is a representation of an actual DOM
+* Virtual DOM is a normal JavaScript Object
+
+
+# What is a Diff Algorithm
+* Basically finds the difference between two virtual DOMS
+
+# React Fiber
+* Came into existense from REACT16.
+
+
+# React is fast because, react is doing efficient DOM manipulation.
+
+# What is React Fiber Architecture?
+* Fiber is the re-implementation of React's rendering engine introduced in React 16.
+* It improves how React updates the UI by making the rendering process incremental and more efficient.
+
+# Why Was Fiber Introduced?
+* To solve performance issues for large, complex apps.
+* To make React apps feel smoother and more responsive.
+* To support features like pausing, interrupting, and prioritizing tasks.
+
+# How Does Fiber Work?
+Two Phases:
+* Render Phase (Work Preparation):
+    * React builds a virtual tree of changes but doesn't apply them yet.
+    * This phase can be paused if higher-priority work comes in.
+* Commit Phase (Work Execution):
+    * React applies the changes to the DOM.
+    * This phase is synchronous and can't be paused.
+
+
+# Benefits of Fiber
+* Smooth and fast updates even in heavy applications.
+* Better handling of animations and user interactions.
+* Enables advanced features like time slicing and concurrent rendering.
+
+# What is the Diff Algorithm?
+* The Diff Algorithm in React is a process for efficiently determining the differences between two versions of the virtual DOM to decide how the actual DOM should be updated.
+
+# How It Works
+* React maintains a virtual DOM, a lightweight copy of the real DOM.
+* When the application state changes, React creates a new virtual DOM tree.
+* The Diff Algorithm compares the old virtual DOM tree with the new one to find the minimum number of changes required.
+* Only the differences (or "diffs") are updated in the actual DOM, making the rendering process fast and efficient.
+
+# What is Reconciliation?
+* Reconciliation is the process in React where the changes identified by the diff algorithm are applied to the real DOM to update the UI.
+
+# Steps in Reconciliation
+Diffing Virtual DOM Trees:
+* React uses the diff algorithm to compare the current virtual DOM tree with the new virtual DOM tree.
+
+Identifying Changes:
+* React determines which elements need to be added, updated, or removed.
+
+Applying Changes to the Real DOM:
+* React updates the actual DOM based on the diffs, ensuring minimal updates and preserving performance.
