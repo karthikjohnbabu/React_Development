@@ -8,12 +8,14 @@ const ReastuarantCard = (props) => {
   const { resData } = props;
   const {
     cloudinaryImageId,
-    name,
-    avgRating,
-    cuisines,
-    costForTwo,
-    deliveryTime,
-  } = resData?.data;
+    name = "Unknown Restaurant",
+    avgRating = "N/A",
+    cuisines = [],
+    costForTwo = "N/A",
+    deliveryTime = "N/A",
+  } = resData?.info || {};
+
+  const deliveryTimeString = resData?.info?.sla?.deliveryTime || "N/A";
   return (
     <div className="res-card" style={styleCard}>
       <img
@@ -24,8 +26,8 @@ const ReastuarantCard = (props) => {
       <h3>{name}</h3>
       <h4>{cuisines.join(", ")}</h4>
       <h4>{avgRating} stars </h4>
-      <h4>{costForTwo / 100} FOR TWO </h4>
-      <h4>{deliveryTime} minutes</h4>
+      <h4>{costForTwo}</h4>
+      <h4>{deliveryTimeString} minutes</h4>
     </div>
   );
 };

@@ -217,64 +217,125 @@ Props are normal argument to a function
 
 - Whenever a state variables updates, react re-renders the component
 
-
 # Reconciliation Algorithm also knowns as React Fibre
-* React creates a virtual DOM
-* virtual DOM is a representation of an actual DOM
-* Virtual DOM is a normal JavaScript Object
 
+- React creates a virtual DOM
+- virtual DOM is a representation of an actual DOM
+- Virtual DOM is a normal JavaScript Object
 
 # What is a Diff Algorithm
-* Basically finds the difference between two virtual DOMS
+
+- Basically finds the difference between two virtual DOMS
 
 # React Fiber
-* Came into existense from REACT16.
 
+- Came into existense from REACT16.
 
 # React is fast because, react is doing efficient DOM manipulation.
 
 # What is React Fiber Architecture?
-* Fiber is the re-implementation of React's rendering engine introduced in React 16.
-* It improves how React updates the UI by making the rendering process incremental and more efficient.
+
+- Fiber is the re-implementation of React's rendering engine introduced in React 16.
+- It improves how React updates the UI by making the rendering process incremental and more efficient.
 
 # Why Was Fiber Introduced?
-* To solve performance issues for large, complex apps.
-* To make React apps feel smoother and more responsive.
-* To support features like pausing, interrupting, and prioritizing tasks.
+
+- To solve performance issues for large, complex apps.
+- To make React apps feel smoother and more responsive.
+- To support features like pausing, interrupting, and prioritizing tasks.
 
 # How Does Fiber Work?
-Two Phases:
-* Render Phase (Work Preparation):
-    * React builds a virtual tree of changes but doesn't apply them yet.
-    * This phase can be paused if higher-priority work comes in.
-* Commit Phase (Work Execution):
-    * React applies the changes to the DOM.
-    * This phase is synchronous and can't be paused.
 
+Two Phases:
+
+- Render Phase (Work Preparation):
+  - React builds a virtual tree of changes but doesn't apply them yet.
+  - This phase can be paused if higher-priority work comes in.
+- Commit Phase (Work Execution):
+  - React applies the changes to the DOM.
+  - This phase is synchronous and can't be paused.
 
 # Benefits of Fiber
-* Smooth and fast updates even in heavy applications.
-* Better handling of animations and user interactions.
-* Enables advanced features like time slicing and concurrent rendering.
+
+- Smooth and fast updates even in heavy applications.
+- Better handling of animations and user interactions.
+- Enables advanced features like time slicing and concurrent rendering.
 
 # What is the Diff Algorithm?
-* The Diff Algorithm in React is a process for efficiently determining the differences between two versions of the virtual DOM to decide how the actual DOM should be updated.
+
+- The Diff Algorithm in React is a process for efficiently determining the differences between two versions of the virtual DOM to decide how the actual DOM should be updated.
 
 # How It Works
-* React maintains a virtual DOM, a lightweight copy of the real DOM.
-* When the application state changes, React creates a new virtual DOM tree.
-* The Diff Algorithm compares the old virtual DOM tree with the new one to find the minimum number of changes required.
-* Only the differences (or "diffs") are updated in the actual DOM, making the rendering process fast and efficient.
+
+- React maintains a virtual DOM, a lightweight copy of the real DOM.
+- When the application state changes, React creates a new virtual DOM tree.
+- The Diff Algorithm compares the old virtual DOM tree with the new one to find the minimum number of changes required.
+- Only the differences (or "diffs") are updated in the actual DOM, making the rendering process fast and efficient.
 
 # What is Reconciliation?
-* Reconciliation is the process in React where the changes identified by the diff algorithm are applied to the real DOM to update the UI.
+
+- Reconciliation is the process in React where the changes identified by the diff algorithm are applied to the real DOM to update the UI.
 
 # Steps in Reconciliation
+
 Diffing Virtual DOM Trees:
-* React uses the diff algorithm to compare the current virtual DOM tree with the new virtual DOM tree.
+
+- React uses the diff algorithm to compare the current virtual DOM tree with the new virtual DOM tree.
 
 Identifying Changes:
-* React determines which elements need to be added, updated, or removed.
+
+- React determines which elements need to be added, updated, or removed.
 
 Applying Changes to the Real DOM:
-* React updates the actual DOM based on the diffs, ensuring minimal updates and preserving performance.
+
+- React updates the actual DOM based on the diffs, ensuring minimal updates and preserving performance.
+
+# Monolith vs Microservice Architecture
+
+# Monolith:
+
+- We have developed APIs inside this project
+- We also have developed UI code inside this project
+- We also have Authentication code inside this project
+- We also have database connectivity inside the project
+- We also have notification SNS/SMS inside the project
+
+# How Web Apps or UI Applications, fetch the data from the backend ?
+
+# Approach 1
+
+- As soon as the APP loads or Page loads we can fetch the data and render it on the UI
+- Loads -> API -> Render
+
+# Approach 2
+
+- As soon the App loads, we will render the UI
+- Later we will make the API call, and when we get the response.
+- And once we have the response we will re-render the Application
+- Loads -> Render -> API - Re-Render
+- In react, we will always be using the Second Approach
+
+# useEffect
+
+- useEffect is a normal function in JavaScript
+- useEffect takes two arguments, the first argument is the call back function
+- And the second argument is the dependency array
+- useEffect(()=> {}, [])
+
+# When will this useEffect call back function be called ?
+
+- The call back function will be called after the component is rendered
+-
+
+# What is a shimmer UI ?
+
+- A shimmer UI resembles the page's actual UI, so users will understand how quickly the web or mobile app will load even before the content has shown up.
+- we load fake page, until we load a real page.
+
+# Why do we need a useState Variable ?
+
+- When ever state variables update, react triggers a reconcilation cycle.
+  (Re-renders the component)
+
+* React is re-rendering the whole body component, but its only updating the input box value inside the DOM.
+* DOM manipulation is expensive, but react is efficient in this.
