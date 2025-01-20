@@ -339,3 +339,36 @@ Applying Changes to the Real DOM:
 
 * React is re-rendering the whole body component, but its only updating the input box value inside the DOM.
 * DOM manipulation is expensive, but react is efficient in this.
+
+# What is routing in our react Application?
+
+# How can we create multiple URL routes ?
+
+# How we can create nested routes ?
+
+# How we can create different pages ?
+
+- If no dependency array in useEffect, that means useEffect is called on every component render.
+- If there is dependency array present and its empty in useEffect, useEffect is called on only initial render and just once.
+- If there is dependency array present and it is [btnNameReact] => called everytime btnNameReact is updated
+
+# useState - Hook
+
+- Always have the useState hook inside the body of a function component.
+- useState is used to create local state variables inside the functional component
+- Never use the useState Hook inside the if else block and inside for loop and inside a function.
+
+# Official Link: https://reactrouter.com/
+
+# npm install react-router-dom@6
+
+# import { createBrowserRouter } from "react-router-dom";
+
+- Will help us create a routing configuration for us.
+
+# There are two types of routing we can have in Web application
+
+- Client side routing (There is no network calls here)
+- Server side routing (There is network calls present)
+
+
