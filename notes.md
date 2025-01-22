@@ -374,3 +374,7 @@ Applying Changes to the Real DOM:
 
 # Why is component Did mount used?
 * Component Did Mount is used to make API calls
+
+# What are hooks ?
+* Hooks are normal utility function
+
