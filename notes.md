@@ -372,3 +372,5 @@ Applying Changes to the Real DOM:
 - Server side routing (There is network calls present)
 
 
+# Why is component Did mount used?
+* Component Did Mount is used to make API calls
