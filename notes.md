@@ -371,10 +371,33 @@ Applying Changes to the Real DOM:
 - Client side routing (There is no network calls here)
 - Server side routing (There is network calls present)
 
-
 # Why is component Did mount used?
-* Component Did Mount is used to make API calls
+
+- Component Did Mount is used to make API calls
 
 # What are hooks ?
-* Hooks are normal utility function
+
+- Hooks are normal utility function
+
+# Ways to add CSS in to Application
+
+- Sass
+- Scss
+- Styled Components
+- Tailwind CSS
+- Material UI
+- bootstrap
+- Chakra UI
+- Ant Design
+
+# Tailwind CSS using parcel
+
+- npm install -D tailwindcss postcss
+- npx tailwindcss init
+
+# Tail wind css behind the scenes uses postcss
+* npx means invoking or executing 
+* when we run this command "npx tailwindcss init" it will create a tailwind.config.js for us.
+
+
 
