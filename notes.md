@@ -396,8 +396,27 @@ Applying Changes to the Real DOM:
 - npx tailwindcss init
 
 # Tail wind css behind the scenes uses postcss
-* npx means invoking or executing 
-* when we run this command "npx tailwindcss init" it will create a tailwind.config.js for us.
 
+- npx means invoking or executing
+- when we run this command "npx tailwindcss init" it will create a tailwind.config.js for us.
 
+# what is higher order component ?
 
+- Higher order component is a function that takes a component and returns a component
+- End of the day its a normal javascript function
+- Higher order component takes a component as a input, and then it enhances that component, it adds some extra features to the component and returns it back.
+
+# What is controlled and uncontrolled components
+
+- React Application has two layers.
+
+1.  UI Layer
+2.  Data Layer
+
+- UI layer is powered by Data Layer
+- Data layer consist of state, props, Local variables
+
+# Lifting the state up in react -> Go through it.
+
+# what is a props drilling ?
+* 
